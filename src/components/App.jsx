@@ -18,18 +18,18 @@ export class App extends Component {
     number: '',
   };
 
-  componentDidMount() {
-    const contacts = JSON.parse(localStorage.getItem('contacts'));
-    if (contacts) {
-      this.setState({ contacts: contacts });
-    }
-  }
+  // componentDidMount() {
+  //   const contacts = JSON.parse(localStorage.getItem('contacts'));
+  //   if (contacts) {
+  //     this.setState({ contacts: contacts });
+  //   }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.contact !== this.state.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.contact !== this.state.contacts) {
+  //     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  //   }
+  // }
 
   addContact = (id, name, number) => {
     const isContactExist = this.state.contacts.some(
